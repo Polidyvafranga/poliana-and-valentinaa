@@ -1,7 +1,11 @@
 .identificacao{
     color: #6959cd;
 }
-.
+
+.galeria{
+    width: 100%;
+}
+
 body{
     background-color: cyan;
     color: rgb(255, 255, 255);
