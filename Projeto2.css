@@ -8,7 +8,6 @@
 </head>
 <body>
 
-  <!-- HEADER: o "Cartão de Visitas" do site (logo + navegação) -->
   <header class="cabecalho">
     <div class="logo-container">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Rice_icon.svg/240px-Rice_icon.svg.png" alt="Logotipo Naturale" class="logo-img" onerror="this.style.display='none'">
@@ -23,7 +22,6 @@
     </button>
   </header>
 
-  <!-- NAV: navegação principal, dentro do cabeçalho lógico do site -->
   <div class="navegacao">
     <a href="#quem-somos" class="nav-link">quem somos nós?</a>
     <a href="#produtos" class="nav-link">produtos</a>
@@ -32,7 +30,6 @@
   </div>
     <section id="produtos" class="secao-apresentacao">
 
-      <!-- DIV: apenas para agrupar visualmente a imagem do produto (uso correto de div) -->
       <div class="produto-imagem">
         <div class="selo-estrela">
           <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=500&auto=format&fit=crop" alt="Pote de creme facial Rice Brightening Cream da Naturale">
@@ -54,7 +51,6 @@
       </div>
     </section>
 
-    <!-- SECTION: bloco temático "Sobre nós" -->
     <section id="quem-somos" class="secao-sobre">
       <div class="sobre-texto">
         <h2>Sobre nós</h2>
@@ -68,13 +64,11 @@
         </p>
       </div>
 
-      <!-- DIV: agrupamento apenas visual (arredondar a foto), sem valor semântico -->
       <div class="foto-fundadoras">
         <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop" alt="Fundadoras da Naturale">
       </div>
     </section>
 
-  <!-- FOOTER: o "Alicerce" da página, com contato e redes sociais -->
   <footer id="carrinho" class="rodape">
     <h2>Nos contate</h2>
     <div class="contato-grid">
