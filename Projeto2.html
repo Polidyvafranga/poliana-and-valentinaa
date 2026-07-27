@@ -1,68 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>naturale</title>
-    <link rel="stylesheet" href="Projeto2.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naturale - a beleza em sua forma mais pura</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <img src="download.jpeg" alt="">
-        <h1>naturale</h1>
-        <h2>a beleza em sua forma mais pura</h2>
 
-        <div>
-            <p>Quem somos nós?</p>
-            <p>Produtos</p>
-            <p>Produção</p>
-            <p>Carrinho</p>
+  <!-- HEADER: o "Cartão de Visitas" do site (logo + navegação) -->
+  <header class="cabecalho">
+    <div class="logo-container">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Rice_icon.svg/240px-Rice_icon.svg.png" alt="Logotipo Naturale" class="logo-img" onerror="this.style.display='none'">
+    </div>
+
+    <div class="marca">
+      <h1 class="nome-marca">naturale</h1>
+      <p class="slogan">a beleza em sua forma mais pura</p>
+    </div>
+
+    <button class="menu-hamburguer" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- NAV: navegação principal, dentro do cabeçalho lógico do site -->
+  <div class="navegacao">
+    <a href="#quem-somos" class="nav-link">quem somos nós?</a>
+    <a href="#produtos" class="nav-link">produtos</a>
+    <a href="#producao" class="nav-link">produção</a>
+    <a href="#carrinho" class="nav-link">carrinho</a>
+  </div>
+
+  <!-- MAIN: conteúdo principal da página -->
+  <main>
+
+    <!-- SECTION: bloco temático "Apresentação" -->
+    <section id="produtos" class="secao-apresentacao">
+
+      <!-- DIV: apenas para agrupar visualmente a imagem do produto (uso correto de div) -->
+      <div class="produto-imagem">
+        <div class="selo-estrela">
+          <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=500&auto=format&fit=crop" alt="Pote de creme facial Rice Brightening Cream da Naturale">
         </div>
+      </div>
 
-
-    </header>
-    <section>
-
-        <img src="download (1).jpeg" alt="">
-        <div>
-            <h4>Apresentação</h4>
-            <p>Naturale: Ciência verde e tradição para o seu bem-estar.
-                O futuro da beleza é sustentável, e ele começa na nossa relação com a terra. A Naturale é uma marca de
-                cosméticos ecológicos que resgata as propriedades extraordinárias do arroz para criar soluções de alta
-                eficácia para a pele. Do campo para a sua rotina de autocuidado, priorizamos ingredientes
-                biodegradáveis, embalagens eco-responsáveis e uma cadeia de produção limpa.
-                Escolher a Naturale é escolher um manifesto de amor próprio e de preservação. Cuidar de você nunca foi
-                tão natural.</p>
-
-
-        </div>
-
+      <article class="apresentacao-texto">
+        <h2>Apresentação</h2>
+        <h3>Naturale: Ciência verde e tradição para o seu bem-estar.</h3>
+        <p>
+          O futuro da beleza é sustentável, e ele começa na nossa relação com a terra.
+          A Naturale é uma marca de cosméticos ecológicos que resgata as propriedades
+          extraordinárias do arroz para criar soluções de alta eficácia para a pele.
+          Do campo para a sua rotina de autocuidado, priorizamos ingredientes
+          biodegradáveis, embalagens eco-responsáveis e uma cadeia de produção limpa.
+          Escolher a Naturale é escolher um manifesto de amor próprio e de preservação.
+          Cuidar de você nunca foi tão natural.
+        </p>
+      </article>
     </section>
-    <section>
-        <div>
-            <h4>Quem somos nós</h4>
-            <p>A Naturale nasceu do encontro de dois propósitos e de um desejo inquieto de transformar o consumo diário
-                em um ato de respeito pelo planeta. Fundada por duas mulheres apaixonadas por inovação e ecologia, a
-                nossa marca surgiu para provar que a sustentabilidade não precisa ser complexa — ela pode estar presente
-                no que há de mais simples e essencial na nossa terra.</p>
 
-        </div>
-        <img src="foto.jpg" alt="">
+    <!-- SECTION: bloco temático "Sobre nós" -->
+    <section id="quem-somos" class="secao-sobre">
+      <article class="sobre-texto">
+        <h2>Sobre nós</h2>
+        <p>
+          A Naturale nasceu do encontro de dois propósitos e de um desejo inquieto
+          de transformar o consumo diário em um ato de respeito pelo planeta.
+          Fundada por duas mulheres apaixonadas por inovação e ecologia, a nossa
+          marca surgiu para provar que a sustentabilidade não precisa ser complexa
+          — ela pode estar presente no que há de mais simples e essencial na
+          nossa terra.
+        </p>
+      </article>
+
+      <!-- DIV: agrupamento apenas visual (arredondar a foto), sem valor semântico -->
+      <div class="foto-fundadoras">
+        <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop" alt="Fundadoras da Naturale">
+      </div>
     </section>
-    <footer>
-        <h2>Nos contate</h2>
-        <div>
-            <p>instagram:@naturale</p>
-            <p>twitter:@naturale</p>
-        </div>
-        <div>
-            <p>email:naturale@produtos.com</p>
-            <p>telefone:+00 0000-0000</p>
-        </div>
-        
-    </footer>
+
+  </main>
+
+  <!-- FOOTER: o "Alicerce" da página, com contato e redes sociais -->
+  <footer id="carrinho" class="rodape">
+    <h2>Nos contate</h2>
+    <div class="contato-grid">
+      <div class="contato-coluna">
+        <p>instagram: @naturale</p>
+        <p>twitter: @naturale</p>
+      </div>
+      <div class="contato-coluna">
+        <p>email: naturale@produtos.com</p>
+        <p>telefone: +00 0000-0000</p>
+      </div>
+    </div>
+  </footer>
+
 </body>
-
 </html>
