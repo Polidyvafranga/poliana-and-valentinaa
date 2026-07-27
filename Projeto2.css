@@ -1,18 +1,4 @@
-/* =========================================================
-   NATURALE — style.css
-   CSS Externo vinculado via <link> (a melhor prática,
-   conforme "A Batalha das Aplicações" do slide).
-   Organizado em seções + nomenclatura descritiva (BEM-like).
-   ========================================================= */
 
-/* --- Reset básico --- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* padding e border não aumentam o tamanho final da caixa */
-}
-
-/* --- Variáveis de cor e tipografia (Pintando o Canvas) --- */
 :root {
   --verde-escuro: #7a9b3a;
   --verde-medio: #a9c94f;
@@ -21,11 +7,11 @@
   --branco: #ffffff;
   --texto-escuro: #4a5a2a;
   --raio-padrao: 20px;
-  --sombra-padrao: 0 4px 10px rgba(0, 0, 0, 0.15); /* Profundidade e Acabamento */
+  --sombra-padrao: 0 4px 10px rgba(0, 0, 0, 0.15); 
 }
 
 body {
-  font-family: 'Segoe UI', 'Open Sans', sans-serif; /* Dando Voz ao Texto */
+  font-family: 'Segoe UI', 'Open Sans', sans-serif; 
   line-height: 1.6;
   color: var(--texto-escuro);
   background-color: var(--creme);
@@ -36,25 +22,22 @@ img {
   display: block;
 }
 
-/* ---------------------------------------------------------
-   HEADER — Cartão de Visitas (logo + marca + menu)
-   --------------------------------------------------------- */
 .cabecalho {
-  display: flex;              /* Alinhamento Perfeito: Flexbox */
+  display: flex;             
   align-items: center;
   justify-content: space-between;
   gap: 24px;
   background-color: var(--verde-medio);
-  padding: 20px 32px;         /* Box Model: padding interno */
+  padding: 20px 32px;         
 }
 
 .logo-container {
   flex-shrink: 0;
   width: 90px;
   height: 90px;
-  border-radius: 50%;         /* Bordas arredondadas */
+  border-radius: 50%;         
   background-color: var(--branco);
-  box-shadow: var(--sombra-padrao); /* Efeito 3D */
+  box-shadow: var(--sombra-padrao); 
   display: flex;
   align-items: center;
   justify-content: center;
