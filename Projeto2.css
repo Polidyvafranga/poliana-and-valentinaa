@@ -1,0 +1,288 @@
+/* =========================================================
+   NATURALE — style.css
+   CSS Externo vinculado via <link> (a melhor prática,
+   conforme "A Batalha das Aplicações" do slide).
+   Organizado em seções + nomenclatura descritiva (BEM-like).
+   ========================================================= */
+
+/* --- Reset básico --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* padding e border não aumentam o tamanho final da caixa */
+}
+
+/* --- Variáveis de cor e tipografia (Pintando o Canvas) --- */
+:root {
+  --verde-escuro: #7a9b3a;
+  --verde-medio: #a9c94f;
+  --amarelo-claro: #f3f6c9;
+  --creme: #fdfdf8;
+  --branco: #ffffff;
+  --texto-escuro: #4a5a2a;
+  --raio-padrao: 20px;
+  --sombra-padrao: 0 4px 10px rgba(0, 0, 0, 0.15); /* Profundidade e Acabamento */
+}
+
+body {
+  font-family: 'Segoe UI', 'Open Sans', sans-serif; /* Dando Voz ao Texto */
+  line-height: 1.6;
+  color: var(--texto-escuro);
+  background-color: var(--creme);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------------------------------------------------------
+   HEADER — Cartão de Visitas (logo + marca + menu)
+   --------------------------------------------------------- */
+.cabecalho {
+  display: flex;              /* Alinhamento Perfeito: Flexbox */
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background-color: var(--verde-medio);
+  padding: 20px 32px;         /* Box Model: padding interno */
+}
+
+.logo-container {
+  flex-shrink: 0;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;         /* Bordas arredondadas */
+  background-color: var(--branco);
+  box-shadow: var(--sombra-padrao); /* Efeito 3D */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logo-img {
+  width: 70%;
+}
+
+.marca {
+  flex: 1;
+  text-align: center;
+}
+
+.nome-marca {
+  font-size: 3rem;
+  font-style: italic;
+  color: var(--branco);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15); /* Bordas e Sombras: text-shadow */
+}
+
+.slogan {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--branco);
+  margin-top: 4px; /* Box Model: margin externo */
+}
+
+.menu-hamburguer {
+  flex-shrink: 0;
+  width: 44px;
+  height: 34px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.menu-hamburguer::before,
+.menu-hamburguer::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.menu-hamburguer::before { top: 8px; }
+.menu-hamburguer::after  { bottom: 8px; }
+
+/* ---------------------------------------------------------
+   NAV — Navegação principal
+   --------------------------------------------------------- */
+.navegacao {
+  display: flex;              /* Flexbox: distribuir os links */
+  justify-content: space-between;
+  gap: 16px;
+  background-color: var(--verde-escuro);
+  padding: 14px 32px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: var(--branco);
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2); /* O Seletor de Classe em ação */
+  border-radius: 999px;
+  padding: 10px 18px;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.28);
+}
+
+/* ---------------------------------------------------------
+   SECTION — Apresentação (imagem + texto)
+   --------------------------------------------------------- */
+.secao-apresentacao {
+  display: flex;
+  align-items: stretch;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 48px auto;   /* Box Model: margin centraliza o bloco */
+  padding: 0 32px;
+  flex-wrap: wrap;
+}
+
+.produto-imagem {
+  flex: 1 1 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selo-estrela {
+  width: 100%;
+  max-width: 320px;
+  border-radius: var(--raio-padrao);
+  overflow: hidden;
+  box-shadow: var(--sombra-padrao);
+  border: 4px solid var(--verde-medio);
+}
+
+.selo-estrela img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.apresentacao-texto {
+  flex: 2 1 480px;
+  background-color: var(--verde-medio);
+  color: var(--branco);
+  border-radius: var(--raio-padrao); /* Profundidade e Acabamento */
+  box-shadow: var(--sombra-padrao);
+  padding: 36px 44px;
+}
+
+.apresentacao-texto h2 {
+  font-size: 1.8rem;
+  color: var(--texto-escuro);
+  margin-bottom: 14px;
+}
+
+.apresentacao-texto h3 {
+  font-size: 1.15rem;
+  margin-bottom: 14px;
+}
+
+.apresentacao-texto p {
+  font-size: 1rem;
+}
+
+/* ---------------------------------------------------------
+   SECTION — Sobre nós (texto + foto)
+   --------------------------------------------------------- */
+.secao-sobre {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 48px;
+  padding: 36px 32px;
+  flex-wrap: wrap;
+}
+
+.sobre-texto {
+  flex: 2 1 480px;
+  background-color: var(--amarelo-claro);
+  border-radius: var(--raio-padrao);
+  box-shadow: var(--sombra-padrao);
+  padding: 36px 44px;
+}
+
+.sobre-texto h2 {
+  font-size: 1.8rem;
+  color: var(--verde-escuro);
+  margin-bottom: 14px;
+}
+
+.foto-fundadoras {
+  flex: 1 1 220px;
+  display: flex;
+  justify-content: center;
+}
+
+.foto-fundadoras img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;         /* Bordas arredondadas: foto circular */
+  box-shadow: var(--sombra-padrao);
+  border: 4px solid var(--amarelo-claro);
+}
+
+/* ---------------------------------------------------------
+   FOOTER — Rodapé de contato
+   --------------------------------------------------------- */
+.rodape {
+  background-color: var(--verde-medio);
+  padding: 40px 32px 56px;
+  text-align: center;
+}
+
+.rodape h2 {
+  color: var(--texto-escuro);
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+}
+
+.contato-grid {
+  display: grid;                              /* O Mestre do Layout: CSS Grid */
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 24px 80px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contato-coluna {
+  text-align: left;
+  color: var(--branco);
+  font-weight: 600;
+}
+
+.contato-coluna p + p {
+  margin-top: 8px; /* Box Model: espaço entre as linhas */
+}
+
+/* ---------------------------------------------------------
+   Responsividade
+   --------------------------------------------------------- */
+@media (max-width: 720px) {
+  .cabecalho { flex-direction: column; text-align: center; }
+  .nome-marca { font-size: 2.2rem; }
+  .navegacao { flex-direction: column; }
+  .secao-apresentacao, .secao-sobre { flex-direction: column; }
+  .contato-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .contato-coluna { text-align: center; }
+}
