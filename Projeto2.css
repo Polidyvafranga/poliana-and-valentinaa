@@ -1,0 +1,171 @@
+
+body{
+    margin:0;
+    font-family:Georgia, serif;
+    background:#f5f5f5;
+}
+
+.cabecalho{
+    background:#b9cf57;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:20px;
+}
+
+.cabecalho img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    border:2px solid #7b8f1d;
+}
+
+.titulo{
+    text-align:center;
+}
+
+.titulo h1{
+    margin:0;
+    font-size:70px;
+    color:white;
+    font-weight:normal;
+}
+
+.titulo p{
+    margin:0;
+    color:white;
+    font-size:28px;
+    font-style:italic;
+}
+
+.menu{
+    background:#97ad24;
+    display:flex;
+    justify-content:space-evenly;
+    padding:12px;
+}
+
+.menu a{
+    background:#c8da67;
+    color:white;
+    text-decoration:none;
+    padding:10px 25px;
+    border-radius:20px;
+}
+
+.produto{
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    padding:30px;
+}
+
+.produto img{
+    width:300px;
+}
+
+.produto .texto{
+    width:55%;
+    background:#bfd45d;
+    padding:20px;
+    border-radius:25px;
+}
+
+.produto h2{
+    color:#6e7414;
+    margin-top:0;
+}
+
+.produto h3{
+    color:white;
+}
+
+.produto p{
+    color:white;
+    font-size:20px;
+    text-align:justify;
+}
+
+.sobre{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:30px;
+}
+
+.sobre .texto{
+    width:60%;
+    background:#edf89c;
+    padding:25px;
+    border-radius:30px;
+}
+
+.sobre h2{
+    color:#6e7414;
+    margin-top:0;
+}
+
+.sobre p{
+    color:#8a9324;
+    font-size:18px;
+    text-align:justify;
+}
+
+.sobre img{
+    width:280px;
+    height:280px;
+    border-radius:50%;
+}
+
+.rodape{
+    background:#bfd45d;
+    text-align:center;
+    padding:30px;
+}
+
+.rodape h2{
+    color:#6e7414;
+}
+
+.rodape p{
+    color:white;
+    font-size:18px;
+    margin:8px;
+}
+
+@media(max-width:800px){
+
+    .cabecalho{
+        flex-direction:column;
+    }
+
+    .titulo h1{
+        font-size:45px;
+    }
+
+    .titulo p{
+        font-size:18px;
+    }
+
+    .menu{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+
+    .produto,
+    .sobre{
+        flex-direction:column;
+    }
+
+    .produto .texto,
+    .sobre .texto{
+        width:90%;
+        margin-top:20px;
+    }
+
+    .produto img,
+    .sobre img{
+        width:220px;
+    }
+}
